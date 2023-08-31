@@ -36,12 +36,12 @@ REST API penetration testing is complex due to continuous changes in existing AP
 ## Installation
 
 ```
-$ git clone https://github.com/flipkart-incubator/Astra
+$ git clone https://github.com/zlxyc/Astra.git
 
 $ cd Astra
 $ sudo pip install -r requirements.txt
 $ sudo rabbitmq-server
-$ celery -A worker -loglevel=INFO
+$ celery worker --loglevel=INFO
 $ cd API
 $ python3 api.py
 
@@ -59,7 +59,7 @@ $ docker run --name astra-mongo -d mongo
 ### Installing GUI Docker: 
 
 ```
-$ git clone https://github.com/flipkart-incubator/Astra.git
+$ git clone https://github.com/zlxyc/Astra.git
 $ cd Astra
 $ docker build -t astra .
 $ docker run --rm -it --link astra-mongo:mongo -p 8094:8094 astra
@@ -68,7 +68,7 @@ $ docker run --rm -it --link astra-mongo:mongo -p 8094:8094 astra
 ### Installing CLI Docker :
 
 ```
-$ git clone -b docker-cli https://github.com/flipkart-incubator/Astra.git
+$ git clone -b docker-cli https://github.com/zlxyc/Astra.git
 $ cd Astra
 $ docker build -t astra-cli .
 $ docker run --rm -it --link astra-mongo:mongo astra-cli 
